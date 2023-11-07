@@ -17,8 +17,8 @@ public class App {
             System.out.println("Nome: " + pf.getNome());
             System.out.println("CPF: " + pf.getCpf());
             System.out.println("Renda de: " + "R$ " + pf.getRenda());
-            System.out.println("A alíquota de IR será de: " + pf.getAliquotaPf() + "%");
             System.out.println("Imposto a pagar: " + "R$ " + pf.pagarImposto(renda));
+            System.out.println("A alíquota de IR será de: " + pf.getAliquotaPf()*100 + "%");
 
         } else if (tipo.equalsIgnoreCase("PJ")) {
             String cnpj = leitura("Digite seu cnpj: ");
@@ -30,8 +30,8 @@ public class App {
             System.out.println("Nome: " + pj.getNome());
             System.out.println("CPF: " + pj.getCnpj());
             System.out.println("Renda de: " + "R$ " + pj.getRenda());
-            System.out.println("A alíquota de IR será de: " + pj.getAliquotaPj() + "%");
             System.out.println("Imposto a pagar: " + "R$ " + pj.pagarImposto(renda));
+            System.out.println("A alíquota de IR será de: " + pj.getAliquotaPj()*100 + "%");
 
         } else {
             System.out.println("ERRO valor de entrada de PF ou PJ inválido.");
